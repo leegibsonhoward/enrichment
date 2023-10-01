@@ -2,7 +2,7 @@
   "name": "codenamed-enrichment",
   "version": "1.0.0",
   "description": "platform for mentorship programs",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"

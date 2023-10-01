@@ -31,7 +31,7 @@ app.use(
     sassMiddleware({
         src: __dirname + '/scss',    // input supports .sass or .scss files
         dest: __dirname + '/public', // output .css to public/css.style.css
-        debug: true                  // set debug false on production ?            
+        debug: false                  // set debug false on production ?            
     })
 );
 
