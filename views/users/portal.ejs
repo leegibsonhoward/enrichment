@@ -1,0 +1,203 @@
+<!-- Portal will combine user login and signup pages into one tabbed page -->
+<div class="box">
+<div class="tabs is-centered is-boxed is-fullwidth">
+    <ul>
+      <li class="tab is-active" id="signup-tab" onclick="selectTab(event, 'signup-content')">
+        <a href="#signup-tab">
+        <span class="icon is-medium"><i class="fas fa-user-plus"></i></span>
+        <span>Sign Up</span>
+      </a>
+      </li>
+      <li class="tab" id="login-tab" onclick="selectTab(event, 'login-content')">
+        <a href="#login-tab">
+        <span class="icon is-medium"><i class="fas fa-sign-in-alt"></i></span>
+        <span>Login</span>
+      </a>
+      </li>
+    </ul>
+    <!--/tabs is-centered-->
+  </div>
+
+  <div class="container">
+
+    <!-- Signup Tab -->
+    <div class="tab-content" id="signup-content">
+      <div class="content">
+          <form action="/users/create" method="POST">
+            <h3 class="title is-4 has-text-centered has-text-weight-light has-text-grey">Signup with your email</h3>
+    <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input name="first" id="inputFirstName" class="input" type="text" placeholder="First name" autofocus>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control is-expanded has-icons-left has-icons-right">
+              <input name="last" id="inputLastName" class="input is-success" type="text" placeholder="Last name" value="">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" name="email" type="email" id="inputEmail" placeholder="Email" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" name="password" type="password" id="inputPassword" placeholder="Password" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+      
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Skill</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select name="skill">
+                    <option>- select one -</option>
+
+                  <option value="web">Web development</option>
+                  <option value="ios">iOS development</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Experience</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-narrow">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select name="experience">
+                        <option>- select one -</option>
+                        <option value="entry">Entry level (0-1 years)</option>    
+                      <option value="junior">Junior level (1-3 years)</option>
+                      <option value="mid">Mid level (3-5 years)</option>
+                      <option value="senior">Senior level (7+ years)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Role</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-narrow">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select name="programRole">
+                        <option>- select one -</option>
+    
+                      <option value="mentor">Mentor</option>
+                      <option value="mentee">Mentee</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <div class="field is-grouped is-grouped-right">
+        <p class="control">
+          <a href="/">
+          <button class="button is-normal has-padding" type="button">
+            Cancel
+          </button>
+          </a>
+        </p>
+        <p class="control">
+          <button class="button is-success" type="submit">
+            Create account
+          </button>
+        </p>
+      </div>
+</form>
+      </div>
+    </div>
+    
+    <!-- Login Tab -->
+    <div class="tab-content" id="login-content" style="display:none">
+        <div class="content">
+          <form action="/users/login" method="POST">
+            <h3 class="has-text-centered has-text-weight-light has-text-grey">Login to your account</h3>
+            <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                      <input class="input" name="email" type="email" id="inputEmail" placeholder="Email" autofocus required>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-left">
+                      <input class="input" name="password" type="password" id="inputPassword" placeholder="Password" required>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                      <label class="checkbox">
+                          <input type="checkbox">
+                          Remember me
+                      </label>
+                  </div>
+                  <div class="field is-grouped is-grouped-right">
+                      <p class="control">
+                          <a href="/">  
+                        <button class="button is-normal has-padding" type="button">
+                            Cancel
+                          </button>
+                        </a>
+
+                        </p>
+
+                    <p class="control">
+                      <button class="button is-success" type="submit">
+                        Login
+                      </button>
+                    </p>
+                  </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+</div>
+

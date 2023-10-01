@@ -1,0 +1,29 @@
+<% include partials/head %>
+
+<body class="layout-default">
+      
+    <% include partials/flashmsg %>
+
+    <main class="bd-main">
+        <div class="bd-main-container container">
+            <div class="bd-lead">
+              <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="level has-text-centered">
+                        <div class="level-item">
+                          <a href="/"><p class="title is-4 has-text-weight-light has-text-grey-light">Mentorship</p></a>
+                        </div>
+                    </div>
+                    
+                    <%- body %>
+
+                </div>
+              </div>
+          </div>
+        </div>
+      </main>
+
+    <% include partials/scripts %>
+
+</body>
+</html>

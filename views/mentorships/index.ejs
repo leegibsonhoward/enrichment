@@ -1,0 +1,25 @@
+<h2>Mentorships Table</h2>
+  <table class="table">
+<thead> <tr>
+        <th>Mentorship</th>
+        <th>Created</th>
+        <th>Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+<% mentorships.forEach(mentorship => { %> <tr>
+          <td>
+            <a href="<%= `/mentorships/${mentorship._id}` %>">
+              <%= mentorship._id %>
+            </a>
+        </td>
+        <td>
+              <%= mentorship.createdAt %>
+        </td>
+  <td>
+    <%= mentorship.updatedAt %>
+</td>
+  </tr>
+    <% }); %>
+  </tbody>
+</table>

@@ -1,0 +1,28 @@
+@import '../../node_modules/bulma/bulma.sass';
+
+// remove browser scrollbar
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bd-lead {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    padding: 3rem;
+}
+
+
+// tabs for login and signup experiment
+.tabcontent {
+    display: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

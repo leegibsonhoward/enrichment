@@ -1,0 +1,8 @@
+
+    <!-- flash messages colorized and full width centered text -->
+    <% if (flashMessages) { %>
+        <% if (flashMessages.success) { %>
+          <div class="notification is-success has-text-centered"><%= flashMessages.success %></div>
+        <% } else if (flashMessages.error) { %>
+          <div class="notification is-danger has-text-centered"><%= flashMessages.error %></div>  <% } %>
+    <% } %> 

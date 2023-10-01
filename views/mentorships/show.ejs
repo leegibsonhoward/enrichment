@@ -1,0 +1,44 @@
+<h1>Mentorship Data for <%= mentorship._id %></h1>
+<table class="table">
+    <tr>
+        <th>Mentor</th>
+        <td>
+          <a href="<%= `/users/${mentorship.mentor._id}` %>">
+            <%= `${mentorship.mentor.name.first} ${mentorship.mentor.name.last}` %>
+          </a>
+      </td>
+      </tr>
+      <tr>
+          <th>Mentee</th>
+          <td>
+            <a href="<%= `/users/${mentorship.mentee._id}` %>">
+              <%= `${mentorship.mentee.name.first} ${mentorship.mentee.name.last}` %>
+            </a>
+        </td>
+        </tr>
+    <tr>
+    <th>Program Track</th>
+    <td><%= mentorship.programTrack %></td>
+  </tr>
+  <tr>
+    <th>Notes</th>
+    <td><%= mentorship.notes %></td>
+</tr> 
+<tr>
+  </tr>
+</table>
+<div>
+    <a href="/mentorships">View all Mentorships</a>
+ </div> 
+ <div>
+    <a href="<%=`/mentorships/${mentorship._id}/edit`%>">
+      Edit Mentorship Details
+ </a> 
+</div>
+  <div>
+    <a href="<%= `/mentorships/${mentorship._id}/delete?_method=DELETE` %>"
+      onclick="return confirm(
+        'Are you sure you want to delete this mentorship?')"
+      >Delete
+    </a>
+  </div>
