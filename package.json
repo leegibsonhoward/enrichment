@@ -1,5 +1,5 @@
 {
-  "name": "mentorship",
+  "name": "codenamed-enrichment",
   "version": "1.0.0",
   "description": "platform for mentorship programs",
   "main": "main.js",
@@ -7,7 +7,7 @@
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "leeghwrd",
+  "author": "Lee G. Howard",
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",

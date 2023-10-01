@@ -18,7 +18,7 @@ const User = require('./models/user');
 // use new Server Discover and Monitoring engine
 // with { useUnifiedTopology: true } option set
 mongoose.connect(
-    "mongodb://localhost:27017/mentorship_db", {
+    "mongodb://localhost:27017/enrichment_db01", {
         useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true
